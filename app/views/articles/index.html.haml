@@ -1,0 +1,10 @@
+Articles
+= link_to "New Article", new_article_path
+%table
+  %tr
+    %td Uid
+    %td Title
+  - @articles.each do |article|
+    %tr
+      %td= link_to article.uid, article_path(article)
+      %td= article.title
